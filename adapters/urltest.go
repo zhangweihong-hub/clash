@@ -8,7 +8,7 @@ import (
 	"sync"
 	"time"
 
-	C "github.com/Dreamacro/clash/constant"
+	C "clash/constant"
 )
 
 type URLTest struct {

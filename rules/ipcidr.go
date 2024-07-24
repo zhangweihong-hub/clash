@@ -1,9 +1,10 @@
 package rules
 
 import (
+	"fmt"
 	"net"
 
-	C "github.com/Dreamacro/clash/constant"
+	C "clash/constant"
 )
 
 type IPCIDR struct {
@@ -34,6 +35,7 @@ func (i *IPCIDR) Payload() string {
 func NewIPCIDR(s string, adapter string) *IPCIDR {
 	_, ipnet, err := net.ParseCIDR(s)
 	if err != nil {
+		fmt.Println(err)
 	}
 	return &IPCIDR{
 		ipnet:   ipnet,
